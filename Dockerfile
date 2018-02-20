@@ -34,6 +34,7 @@ ENV \
         freerdp                       \
         freerdp-plugins               \
         ghostscript                   \
+        openssl-devel                 \
         libjpeg-turbo                 \
         libssh2                       \
         liberation-mono-fonts         \
@@ -51,6 +52,7 @@ ENV \
         cairo-devel                   \
         freerdp-devel                 \
         gcc                           \
+        openssl-devel                 \
         libjpeg-turbo-devel           \
         libssh2-devel                 \
         libtool                       \
