@@ -74,6 +74,11 @@ RUN yum -y update                        && \
 # Add configuration scripts
 COPY src/guacd-docker/bin /opt/guacd/bin/
 
+# Add SSL certificates and start script to run with SSL certificates
+# Please add SSL certificate and key into docker-config/guacd directory
+
+COPY docker-config/guacd /etc/opt/guacd
+
 # Copy source to container for sake of build
 COPY . "$BUILD_DIR"
 
