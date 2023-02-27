@@ -140,6 +140,11 @@ ARG DEBIAN_FRONTEND=noninteractive
 # Copy build artifacts into this stage
 COPY --from=builder ${PREFIX_DIR} ${PREFIX_DIR}
 
+# Add SSL certificates and start script to run with SSL certificates
+ # Please add SSL certificate and key into docker-config/guacd directory
+
+COPY docker-config/guacd /etc/opt/guacd
+
 # Bring runtime environment up to date and install runtime dependencies
 RUN apt-get update                                                                                       && \
     apt-get install -t ${UBUNTU_RELEASE} -y --no-install-recommends $RUNTIME_DEPENDENCIES                && \
